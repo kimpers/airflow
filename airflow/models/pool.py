@@ -20,8 +20,8 @@
 from sqlalchemy import Column, Integer, String, Text
 
 from airflow.models.base import Base
-from airflow.utils.state import State
 from airflow.utils.db import provide_session
+from airflow.utils.state import State
 
 
 class Pool(Base):

@@ -21,17 +21,19 @@ import datetime
 import time
 import unittest
 import urllib
-from typing import Union, List
+from typing import List, Union
+
 import pendulum
 from freezegun import freeze_time
-from mock import patch, mock_open
-from parameterized import parameterized, param
+from mock import mock_open, patch
+from parameterized import param, parameterized
 from sqlalchemy.orm.session import Session
+
 from airflow import models, settings
 from airflow.configuration import conf
 from airflow.contrib.sensors.python_sensor import PythonSensor
 from airflow.exceptions import AirflowException, AirflowSkipException
-from airflow.models import DAG, TaskFail, TaskInstance as TI, TaskReschedule, DagRun
+from airflow.models import DAG, DagRun, TaskFail, TaskInstance as TI, TaskReschedule
 from airflow.operators.bash_operator import BashOperator
 from airflow.operators.dummy_operator import DummyOperator
 from airflow.operators.python_operator import PythonOperator

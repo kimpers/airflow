@@ -17,9 +17,9 @@
 # specific language governing permissions and limitations
 # under the License.
 """Operators that integrat with Google Cloud Build service."""
-from copy import deepcopy
 import re
-from urllib.parse import urlparse, unquote
+from copy import deepcopy
+from urllib.parse import unquote, urlparse
 
 import six
 

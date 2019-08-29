@@ -18,6 +18,11 @@
 # under the License.
 #
 import os
+from copy import copy
+from functools import wraps
+
+from airflow import settings
+from airflow.exceptions import AirflowException
 
 # inspect.signature is only available in Python 3. funcsigs.signature is
 # a backport.
@@ -28,11 +33,7 @@ except AttributeError:
     import funcsigs
     signature = funcsigs.signature
 
-from copy import copy
-from functools import wraps
 
-from airflow import settings
-from airflow.exceptions import AirflowException
 
 
 def apply_defaults(func):

@@ -19,9 +19,9 @@
 
 from datetime import datetime
 
-from bs4 import BeautifulSoup
 import mock
 import six
+from bs4 import BeautifulSoup
 from six.moves.urllib.parse import parse_qs
 
 from airflow.www_rbac import utils

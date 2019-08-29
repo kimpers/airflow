@@ -34,24 +34,24 @@ import dill
 import lazy_object_proxy
 import pendulum
 from six.moves.urllib.parse import quote_plus
-from sqlalchemy import Column, String, Float, Integer, PickleType, Index, func
+from sqlalchemy import Column, Float, Index, Integer, PickleType, String, func
 from sqlalchemy.orm import reconstructor
 from sqlalchemy.orm.session import Session
 
 from airflow import settings
 from airflow.configuration import conf
 from airflow.exceptions import (
-    AirflowException, AirflowTaskTimeout, AirflowSkipException, AirflowRescheduleException
+    AirflowException, AirflowRescheduleException, AirflowSkipException, AirflowTaskTimeout,
 )
-from airflow.models.base import Base, ID_LEN
+from airflow.models.base import ID_LEN, Base
 from airflow.models.log import Log
 from airflow.models.pool import Pool
 from airflow.models.taskfail import TaskFail
 from airflow.models.taskreschedule import TaskReschedule
 from airflow.models.variable import Variable
-from airflow.models.xcom import XCom, XCOM_RETURN_KEY
+from airflow.models.xcom import XCOM_RETURN_KEY, XCom
 from airflow.settings import Stats
-from airflow.ti_deps.dep_context import DepContext, QUEUE_DEPS, RUN_DEPS
+from airflow.ti_deps.dep_context import QUEUE_DEPS, RUN_DEPS, DepContext
 from airflow.utils import timezone
 from airflow.utils.db import provide_session
 from airflow.utils.email import send_email

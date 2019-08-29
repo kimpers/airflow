@@ -17,22 +17,20 @@
 # specific language governing permissions and limitations
 # under the License.
 #
-import json
 import functools
-
-import httplib2
-import google.auth
-import google_auth_httplib2
-import google.oauth2.service_account
+import json
 import os
 import tempfile
 
-from google.api_core.exceptions import GoogleAPICallError, AlreadyExists, RetryError
+import google.auth
+import google.oauth2.service_account
+import google_auth_httplib2
+import httplib2
+from google.api_core.exceptions import AlreadyExists, GoogleAPICallError, RetryError
 from googleapiclient.errors import HttpError
 
 from airflow.exceptions import AirflowException
 from airflow.hooks.base_hook import BaseHook
-
 
 _DEFAULT_SCOPES = ('https://www.googleapis.com/auth/cloud-platform',)
 # The name of the environment variable that Google Authentication library uses

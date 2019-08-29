@@ -22,9 +22,9 @@ import os
 from sqlalchemy import or_
 
 from airflow import models
-from airflow.models import TaskFail, DagModel
-from airflow.utils.db import provide_session
 from airflow.exceptions import DagFileExists, DagNotFound
+from airflow.models import DagModel, TaskFail
+from airflow.utils.db import provide_session
 
 
 @provide_session

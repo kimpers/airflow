@@ -17,10 +17,7 @@
 # specific language governing permissions and limitations
 # under the License.
 #
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+from __future__ import absolute_import, division, print_function, unicode_literals
 
 import os
 import signal
@@ -30,11 +27,11 @@ from sqlalchemy.exc import OperationalError
 
 from airflow.configuration import conf
 from airflow.exceptions import AirflowException
+from airflow.jobs.base_job import BaseJob
 from airflow.settings import Stats
 from airflow.task.task_runner import get_task_runner
 from airflow.utils.db import provide_session
 from airflow.utils.net import get_hostname
-from airflow.jobs.base_job import BaseJob
 from airflow.utils.state import State
 
 

@@ -19,14 +19,12 @@
 
 import functools
 
-from bs4 import BeautifulSoup
 import mock
 import six
+from bs4 import BeautifulSoup
 from six.moves.urllib.parse import parse_qs
 
-from airflow.www import app as application
-
-from airflow.www import utils
+from airflow.www import app as application, utils
 
 if six.PY2:
     # Need `assertRegex` back-ported from unittest2

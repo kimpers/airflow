@@ -18,12 +18,11 @@
 # under the License.
 
 import unittest
+
+from airflow.contrib.hooks.ssh_hook import SSHHook
 from airflow.models import Connection
 from airflow.utils import db
 from tests.compat import mock
-
-from airflow.contrib.hooks.ssh_hook import SSHHook
-
 
 HELLO_SERVER_CMD = """
 import socket, sys

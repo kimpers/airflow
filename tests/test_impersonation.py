@@ -18,10 +18,10 @@
 # under the License.
 # from __future__ import print_function
 import errno
+import logging
 import os
 import subprocess
 import unittest
-import logging
 
 from airflow import jobs, models
 from airflow.utils.db import add_default_pool_if_not_exists

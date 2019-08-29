@@ -18,15 +18,13 @@
 # under the License.
 #
 import sys
-
 from math import pow
 from time import sleep
 
+from airflow.contrib.hooks.aws_hook import AwsHook
 from airflow.exceptions import AirflowException
 from airflow.models import BaseOperator
 from airflow.utils import apply_defaults
-
-from airflow.contrib.hooks.aws_hook import AwsHook
 
 
 class AWSBatchOperator(BaseOperator):

@@ -20,8 +20,7 @@
 import unittest
 
 from airflow.contrib.hooks.gcs_hook import _parse_gcs_url
-from airflow.contrib.operators.s3_to_gcs_operator import \
-    S3ToGoogleCloudStorageOperator
+from airflow.contrib.operators.s3_to_gcs_operator import S3ToGoogleCloudStorageOperator
 from tests.compat import mock
 
 TASK_ID = 'test-s3-gcs-operator'

@@ -15,13 +15,14 @@
 # specific language governing permissions and limitations
 # under the License.
 
-from airflow.contrib.kubernetes.kubernetes_request_factory.\
-    pod_request_factory import SimplePodRequestFactory, \
-    ExtractXcomPodRequestFactory
+import unittest
+
+from airflow.contrib.kubernetes.kubernetes_request_factory.pod_request_factory import (
+    ExtractXcomPodRequestFactory, SimplePodRequestFactory,
+)
 from airflow.contrib.kubernetes.pod import Pod, Resources
 from airflow.contrib.kubernetes.secret import Secret
 from airflow.exceptions import AirflowConfigException
-import unittest
 
 XCOM_CMD = """import time
 while True:

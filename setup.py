@@ -22,11 +22,11 @@ import imp
 import io
 import logging
 import os
-import sys
 import subprocess
+import sys
 import unittest
 
-from setuptools import setup, find_packages, Command
+from setuptools import Command, find_packages, setup
 
 logger = logging.getLogger(__name__)
 
@@ -274,6 +274,7 @@ devel = [
     'dumb-init>=1.2.2',
     'flake8>=3.6.0',
     'flake8-colors',
+    'flake8-isort',
     'freezegun',
     'ipdb',
     'jira',

@@ -30,7 +30,7 @@ from mock import patch
 
 from airflow import models, settings
 from airflow.configuration import conf
-from airflow.exceptions import AirflowException, AirflowDagCycleException
+from airflow.exceptions import AirflowDagCycleException, AirflowException
 from airflow.models import DAG, DagModel, TaskInstance as TI
 from airflow.operators.dummy_operator import DummyOperator
 from airflow.operators.subdag_operator import SubDagOperator

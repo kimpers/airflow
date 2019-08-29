@@ -21,18 +21,15 @@
 import os
 import unittest
 
-from parameterized import parameterized
-from google.api_core.exceptions import RetryError, AlreadyExists
+import google.auth
+from google.api_core.exceptions import AlreadyExists, RetryError
+from google.auth.exceptions import GoogleAuthError
 from google.cloud.exceptions import MovedPermanently
+from googleapiclient.errors import HttpError
+from parameterized import parameterized
 
 from airflow import AirflowException, LoggingMixin
-from googleapiclient.errors import HttpError
-
 from airflow.contrib.hooks import gcp_api_base_hook as hook
-
-import google.auth
-from google.auth.exceptions import GoogleAuthError
-
 from airflow.hooks.base_hook import BaseHook
 from tests.compat import mock
 

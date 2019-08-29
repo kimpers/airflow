@@ -17,8 +17,6 @@
 # specific language governing permissions and limitations
 # under the License.
 
-from airflow.models import DAG
-from airflow.operators.python_operator import PythonOperator
 from datetime import datetime
 
 # AIRFLOW-1893 - Originally, impersonation tests were incomplete missing the use case when
@@ -29,6 +27,9 @@ from datetime import datetime
 # This DAG is used to test that impersonation propagates the PYTHONPATH environment
 # variable correctly.
 from fake_datetime import FakeDatetime
+
+from airflow.models import DAG
+from airflow.operators.python_operator import PythonOperator
 
 DEFAULT_DATE = datetime(2016, 1, 1)
 

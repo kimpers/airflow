@@ -17,10 +17,10 @@
 # specific language governing permissions and limitations
 # under the License.
 
-from airflow import utils
-from airflow import DAG
-from airflow.operators.dummy_operator import DummyOperator
 from datetime import datetime, timedelta
+
+from airflow import DAG, utils
+from airflow.operators.dummy_operator import DummyOperator
 
 now = datetime.now()
 now_to_the_hour = (

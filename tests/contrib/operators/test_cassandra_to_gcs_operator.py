@@ -19,10 +19,11 @@
 from __future__ import unicode_literals
 
 import unittest
-import mock
 from builtins import str
-from airflow.contrib.operators.cassandra_to_gcs import \
-    CassandraToGoogleCloudStorageOperator
+
+import mock
+
+from airflow.contrib.operators.cassandra_to_gcs import CassandraToGoogleCloudStorageOperator
 
 
 class CassandraToGCSTest(unittest.TestCase):

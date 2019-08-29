@@ -29,8 +29,7 @@ from tempfile import NamedTemporaryFile
 
 import six
 import unicodecsv as csv
-from past.builtins import basestring
-from past.builtins import unicode
+from past.builtins import basestring, unicode
 from six.moves import zip
 
 import airflow.security.utils as utils

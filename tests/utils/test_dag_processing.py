@@ -17,20 +17,21 @@
 # specific language governing permissions and limitations
 # under the License.
 
-from datetime import (datetime, timedelta)
 import os
 import sys
 import tempfile
 import unittest
-import mock
+from datetime import datetime, timedelta
 
+import mock
 from mock import MagicMock, PropertyMock
 
 from airflow.configuration import conf, mkdir_p
 from airflow.jobs import DagFileProcessor
 from airflow.utils import timezone
-from airflow.utils.dag_processing import (DagFileProcessorAgent, DagFileProcessorManager,
-                                          DagFileStat, correct_maybe_zipped)
+from airflow.utils.dag_processing import (
+    DagFileProcessorAgent, DagFileProcessorManager, DagFileStat, correct_maybe_zipped,
+)
 
 TEST_DAG_FOLDER = os.path.join(
     os.path.dirname(os.path.realpath(__file__)), os.pardir, 'dags')
